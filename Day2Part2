@@ -10,5 +10,4 @@ for line in file:
     if ((password[lowerNum] == condition or password[higherNum] == condition) and password[lowerNum] != password[higherNum]):
         validPw = validPw+1
 
-
 print(validPw)
