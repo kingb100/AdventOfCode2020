@@ -1,0 +1,12 @@
+file = open("one.txt")
+numArr = []
+
+for line in file:
+    numArr.append(int(line))
+
+for x in numArr:
+    firstNum = x
+    for y in numArr:
+        secNum = y
+        if(firstNum+secNum==2020):
+            print(firstNum*secNum)
