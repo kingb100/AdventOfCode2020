@@ -1,0 +1,14 @@
+file = open("two.txt")
+
+validPw = 0
+for line in file:
+    lowerNum = int(line.split("-")[0])
+    higherNum = int(line.split("-")[1].split(' ')[0])
+    condition = line.split(' ')[1].split(":")[0]
+    password = line.split(' ', 2)[2]
+    occurence = password.count(condition)
+
+    if (occurence >= lowerNum and occurence <= higherNum):
+        validPw = validPw+1
+
+print (validPw)
