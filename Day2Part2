@@ -1,0 +1,14 @@
+file = open("two.txt")
+
+validPw = 0
+for line in file:
+    lowerNum = int(line.split("-")[0])-1
+    higherNum = int(line.split("-")[1].split(' ')[0])-1
+    condition = line.split(' ')[1].split(":")[0]
+    password = line.split(' ', 2)[2]
+
+    if ((password[lowerNum] == condition or password[higherNum] == condition) and password[lowerNum] != password[higherNum]):
+        validPw = validPw+1
+
+
+print(validPw)
